@@ -36,7 +36,7 @@ async function renderCarousel() {
       if (i < posts.length) {
         const post = posts[i];
         slide.innerHTML = `
-          <a href="blogspecific.html?id=${post.id}">
+          <a href="/html/blogspecific.html?id=${post.id}">
             <img src="${post.image}" alt="Post Image">
             <h3>${post.title}</h3>
           </a>`;

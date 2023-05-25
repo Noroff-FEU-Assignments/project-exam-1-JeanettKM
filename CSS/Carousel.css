@@ -13,7 +13,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;
-    max-width: 50%;
+    max-width: 55%;
   }
   
   .slide {
