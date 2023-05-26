@@ -3,6 +3,7 @@
 <head>
   <title>Contact Me</title>
   <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+  <link rel="stylesheet" href="/CSS/contact.css">
   <link rel="icon" href="data:," rel="Stopping GET favicon error" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,31 +38,36 @@
     </nav>
   </header>
   <main>
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form" onsubmit="validateForm(event)">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" required minlength="5">
-          <div id="nameError" class="error">Please enter your name, minimun of 5 charaters</div>
-        </div>
-        <div>
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" required>
-          <div id="emailError" class="error">Please enter a valid email adress</div>
-        </div>
-        <div>
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" required minlength="15">
-          <div id="subjectError" class="error">Please enter a subject, minimum of 15 characters</div>
-        </div>
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" required minlength="25"></textarea>
-          <div id="messageError" class="error">Please enter a message with a minimum of 25 characters</div>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+    <h1>Contact Me</h1>
+    <section class="formBackground">
+      <section id="contact">
+        <form id="contact-form" onsubmit="validateForm(event)">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required minlength="5">
+            <div id="nameError" class="error">Please enter your name, minimun of 5 charaters</div>
+          </div>
+
+          <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
+            <div id="emailError" class="error">Please enter a valid email adress</div>
+          </div>
+
+          <div>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" required minlength="15">
+            <div id="subjectError" class="error">Please enter a subject, minimum of 15 characters</div>
+          </div>
+          <br>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" required minlength="25"></textarea>
+            <div id="messageError" class="error">Please enter a message with a minimum of 25 characters</div>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </section>
   </main>
   <footer>

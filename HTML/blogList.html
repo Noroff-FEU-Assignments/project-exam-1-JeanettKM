@@ -3,6 +3,7 @@
 <head>
   <title>All Posts</title>
   <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+  <link rel="stylesheet" type="text/css" href="/CSS/bloglist.css">
   <link rel="icon" href="data:," rel="Stopping GET favicon error" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,19 +39,19 @@
   </header>
   <main>
     <section id="blogs">
-        <h2>My Blogs</h2>
-        <div id="blog-list">
-          <!-- Blog posts go here -->
+        <h1>Blog Posts</h1>
+        <div id="blogContainer">
+          <!-- Blog posts will be dynamically added here -->
         </div>
-        <button id="load-more" style="display: none;">Load More</button>
-
+        <div class="ButtonBackground">
+          <button id="loadMoreBtn">Load More</button>
+        </div>
       </section>
   </main>
   <footer>
     <p>&copy; 2023</p>
   </footer>
-
-  <script src="/Javascript/script.js"></script>
   <script src="/Javascript/navbar.js"></script>
+  <script src="/Javascript/blogList.js"></script>
 </body>
 </html>

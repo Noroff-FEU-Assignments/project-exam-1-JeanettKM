@@ -1,6 +1,6 @@
 async function fetchBlogPosts() {
   try {
-    const response = await fetch('https://www.melsom-development.no/wp-json/wp/v2/posts');
+    const response = await fetch('https://www.melsom-development.no/wp-json/wp/v2/posts?per_page=12');
     const posts = await response.json();
 
     const postPromises = posts.map(async (post) => {
@@ -21,26 +21,25 @@ async function fetchBlogPosts() {
   }
 }
 
+
 async function renderCarousel() {
   const slidesContainer = document.querySelector('.slides');
   slidesContainer.innerHTML = '';
 
   try {
     const posts = await fetchBlogPosts();
-    const carouselSize = Math.ceil(posts.length / 4) * 4;
+    const carouselSize = posts.length;
 
     for (let i = 0; i < carouselSize; i++) {
       const slide = document.createElement('div');
       slide.classList.add('slide');
 
-      if (i < posts.length) {
-        const post = posts[i];
-        slide.innerHTML = `
-          <a href="/html/blogspecific.html?id=${post.id}">
-            <img src="${post.image}" alt="Post Image">
-            <h3>${post.title}</h3>
-          </a>`;
-      }
+      const post = posts[i];
+      slide.innerHTML = `
+        <a href="/html/blogspecific.html?id=${post.id}">
+          <img src="${post.image}" alt="Post Image">
+          <h3>${post.title}</h3>
+        </a>`;
 
       slidesContainer.appendChild(slide);
     }
@@ -48,6 +47,7 @@ async function renderCarousel() {
     console.error('Error rendering carousel:', error);
   }
 }
+
 
   
   // Handle navigation
