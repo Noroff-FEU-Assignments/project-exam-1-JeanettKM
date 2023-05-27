@@ -195,12 +195,6 @@ footer p {
   height: 100%;
 }
 
-/*Form validation*/
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-}
 
 /*BlogSpecific*/
 
@@ -239,8 +233,10 @@ footer p {
   padding-top: 40px;
   padding-bottom: 50px;
   margin-left: 60px;
-  font-weight: 100;
   
+}
+.AboutMeHeader h2 {
+  font-weight: 100;
 }
 
 .ContactInfo {
@@ -289,3 +285,15 @@ footer p {
   height: 45px;
 
 }
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+input:invalid + .form-error {
+  display: block;
+}
+

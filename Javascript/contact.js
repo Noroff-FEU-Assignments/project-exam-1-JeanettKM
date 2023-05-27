@@ -1,56 +1,90 @@
-const form = document.querySelector("#contactForm");
-const firstName = document.querySelector("#firstName");
-const firstNameError = document.querySelector("#firstNameError");
-const surName = document.querySelector("#surName");
-const surNameError = document.querySelector("#surNameError");
-const phone = document.querySelector("#phone");
-const phoneError = document.querySelector("#phoneError");
-const email = document.querySelector("#email");
+const form = document.querySelector("#contact-form");
+const nameInput = document.querySelector("#name");
+const nameError = document.querySelector("#nameError");
+const emailInput = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+const subjectInput = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
+const messageInput = document.querySelector("#message");
+const messageError = document.querySelector("#messageError");
 
+form.addEventListener("submit", validateForm);
 
-function validateForm (){
-    event.preventDefault();
+function validateForm(event) {
+  event.preventDefault();
 
-    if(checkLength(firstName.value, 1) === true) {
-        firstNameError.style.display = "none";
-    } else {
-        firstNameError.style.display ="block";
-    }
+  let isValid = true;
 
-    if(checkLength(surName.value, 1) === true) {
-        surNameError.style.display = "none";
-    } else {
-        surNameError.style.display ="block";
-    }
+  if (!checkLength(nameInput.value, 5)) {
+    nameError.style.display = "block";
+    isValid = false;
+  } else {
+    nameError.style.display = "none";
+  }
 
-    if(checkLength(phone.value, 7) === true) {
-        phoneError.style.display = "none";
-    } else {
-        phoneError.style.display ="block";
-    }
+  if (!validateEmail(emailInput.value)) {
+    emailError.style.display = "block";
+    isValid = false;
+  } else {
+    emailError.style.display = "none";
+  }
 
-    if(validateEmail(email.value) === true) {
-        emailError.style.display = "none";
-    } else {
-        emailError.style.display ="block";
-    }
+  if (!checkLength(subjectInput.value, 15)) {
+    subjectError.style.display = "block";
+    isValid = false;
+  } else {
+    subjectError.style.display = "none";
+  }
+
+  if (!checkLength(messageInput.value, 25)) {
+    messageError.style.display = "block";
+    isValid = false;
+  } else {
+    messageError.style.display = "none";
+  }
+
+  if (isValid) {
+    form.submit();
+  }
 }
-
-form.addEventListener("submit", validateForm)
 
 function checkLength(value, len) {
-
-    if(value.trim().length > len) {
-        return true;
-    } else {
-        return false;
-    }
+  return value.trim().length >= len;
 }
 
-
 function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
+  const regEx = /\S+@\S+\.\S+/;
+  return regEx.test(email);
+}
+
+nameInput.addEventListener("input", () => {
+  if (checkLength(nameInput.value, 5)) {
+    nameError.style.display = "none";
+  } else {
+    nameError.style.display = "block";
   }
+});
+
+emailInput.addEventListener("input", () => {
+  if (validateEmail(emailInput.value)) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+  }
+});
+
+subjectInput.addEventListener("input", () => {
+  if (checkLength(subjectInput.value, 15)) {
+    subjectError.style.display = "none";
+  } else {
+    subjectError.style.display = "block";
+  }
+});
+
+messageInput.addEventListener("input", () => {
+  if (checkLength(messageInput.value, 25)) {
+    messageError.style.display = "none";
+  } else {
+    messageError.style.display = "block";
+  }
+});
