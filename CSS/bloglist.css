@@ -19,6 +19,8 @@
     width: 100%;
     max-width: 300px;
     border-radius: 3px;
+    background-size: cover;
+    background-position: center;
   
   }
   
@@ -30,7 +32,7 @@
   .blogTitle {
     font-weight: 100;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
     color: #523941;
@@ -41,21 +43,22 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
-    background: #ceb2bb;
+    background: #a2878f;
     padding: 30px;
   }
   
-  #blogContainer div {
+ #blogContainer div {
     width: 30%;
     max-width: 30%;
     min-width: 250px;
     min-height: 300px;
-  }
+ }
+
   
   
   #blogContainer h3 {
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 15px;
     font-weight:300;
     margin-bottom: 30px;
     margin-top: 0px;
@@ -74,6 +77,7 @@
     margin-top: 50px;
     margin-bottom:80px;
     color: #523941;
+    font-size: 22;
   }
 
 
@@ -84,7 +88,7 @@
 
 }
 .ButtonBackground {
-    background: #ceb2bb;
+    background: #a2878f;
     text-align: center;
     padding-bottom: 70px;
 }
@@ -142,7 +146,7 @@
   .nav-logo {
     font-size: 2rem;
     margin-right: auto; /* Push the nav-logo to the left */
-    color: #f3dfe6;
+    color: white;
   }
   
   @media (max-width: 770px) {
@@ -214,3 +218,4 @@
       margin: 10px;
     }
   }
+
