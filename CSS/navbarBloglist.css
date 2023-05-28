@@ -21,9 +21,11 @@
   }
   
   .nav-logo {
-    font-size: 2rem;
-    margin-right: auto; /* Push the nav-logo to the left */
+    margin-right: auto;
     color: #eed9df;
+    font-size: 24px;
+    font-weight: 100;
+    
   }
   
   @media (max-width: 770px) {

@@ -21,9 +21,8 @@ async function fetchBlogPosts() {
   }
 }
 
-
 async function renderCarousel() {
-  const slidesContainer = document.querySelector('.slides');
+  const slidesContainer = document.querySelector('.carouselCards');
   slidesContainer.innerHTML = '';
 
   try {
@@ -32,7 +31,7 @@ async function renderCarousel() {
 
     for (let i = 0; i < carouselSize; i++) {
       const slide = document.createElement('div');
-      slide.classList.add('slide');
+      slide.classList.add('carouselItem');
 
       const post = posts[i];
       slide.innerHTML = `
@@ -48,38 +47,35 @@ async function renderCarousel() {
   }
 }
 
+function handleNavigation(direction) {
+  const slidesContainer = document.querySelector('.carouselCards');
+  const slideWidth = slidesContainer.querySelector('.carouselItem').offsetWidth;
 
-  function handleNavigation(direction) {
-    const slidesContainer = document.querySelector('.slides');
-    const slideWidth = slidesContainer.querySelector('.slide').offsetWidth;
-  
-    const currentPosition = slidesContainer.scrollLeft;
-    let newPosition;
-  
-    if (direction === 'prev') {
-      newPosition = currentPosition - slideWidth * 4;
-      if (newPosition < 0) {
-        newPosition = 0;
-      }
-    } else {
-      newPosition = currentPosition + slideWidth * 4;
-      if (newPosition > slidesContainer.scrollWidth - slidesContainer.offsetWidth) {
-        newPosition = slidesContainer.scrollWidth - slidesContainer.offsetWidth;
-      }
+  const currentPosition = slidesContainer.scrollLeft;
+  let newPosition;
+
+  if (direction === 'prev') {
+    newPosition = currentPosition - slideWidth * 4;
+    if (newPosition < 0) {
+      newPosition = 0;
     }
-  
-    slidesContainer.scrollTo({
-      left: newPosition,
-      behavior: 'smooth'
-    });
+  } else {
+    newPosition = currentPosition + slideWidth * 4;
+    if (newPosition > slidesContainer.scrollWidth - slidesContainer.offsetWidth) {
+      newPosition = slidesContainer.scrollWidth - slidesContainer.offsetWidth;
+    }
   }
-  
-  
-  const leftButton = document.querySelector('.leftButton');
-  const rightButton = document.querySelector('.rightButton');
-  
-  leftButton.addEventListener('click', () => handleNavigation('prev'));
-  rightButton.addEventListener('click', () => handleNavigation('next'));
 
-  renderCarousel();
-  
+  slidesContainer.scrollTo({
+    left: newPosition,
+    behavior: 'smooth'
+  });
+}
+
+renderCarousel();
+
+const leftButton = document.querySelector('.leftButton');
+const rightButton = document.querySelector('.rightButton');
+
+leftButton.addEventListener('click', () => handleNavigation('prev'));
+rightButton.addEventListener('click', () => handleNavigation('next'));

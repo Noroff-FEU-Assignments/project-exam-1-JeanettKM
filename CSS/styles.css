@@ -72,6 +72,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  border-bottom: solid #e6d1d8 2px;
 }
 
 .nav-menu {
@@ -83,9 +84,10 @@ h3 {
 }
 
 .nav-logo {
-  font-size: 2rem;
+  font-size: 24px;
   margin-right: auto; 
   color: #523941;
+  font-weight: 100;
 }
 
 @media (max-width: 770px) {
@@ -179,6 +181,7 @@ h3 {
   font-size: 15px;
   flex-shrink: 0;
   padding: 5px;
+  border-top: solid #e6d1d8 2px;
 
 }
 
@@ -240,6 +243,9 @@ h3 {
   max-width: 350px;
   margin-top: 140px;
   margin-left: 50px;
+  padding: 5px;
+  background-color: rgb(243, 225, 225);
+  border-radius: 3px;
 }
 
 #blogImage img {
@@ -351,6 +357,10 @@ h3 {
   margin-top: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
+
+  border-radius: 5px;
+  padding: 4px;
+  background: rgb(148, 1, 1) ;
 }
 
 .flexconteiner2 {rm
@@ -393,21 +403,21 @@ h3 {
 
 #contactForm button {
   padding: 12px 65px;
-  background-color:#f1e3e8;
-  color: #574349;
+  background-color:#fcf3f6;
+  color: #302428;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #contactForm button:hover {
-  background-color:#654C54;
+  background-color:#49232f;
   color: #f1e3e8;
-  border: solid #654C54 0.1px;
+  border: solid #3a1521 2px;
 }
 
 /* Index Carousel */
 
-.carousel {
+.carouselContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -418,7 +428,7 @@ h3 {
   height: 430px;
 }
 
-.slides {
+.carouselCards {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -427,17 +437,20 @@ h3 {
   max-width: 55%;
 }
 
-.slide:hover {
-  padding-top: 7px;
+.carouselItem:hover {
+  margin-top: 10px;
 }
 
 
-.slide{
+.carouselItem{
 margin-left: 75px;
+padding: 5px;
+background-color: #fff0f0;
+border-radius: 3px;
 
 }
 
-.slide a {
+.carouselItem a {
   flex: 0 0 25%; 
   scroll-snap-align: center;
   color: white;
@@ -445,11 +458,12 @@ margin-left: 75px;
   width: 180px;
   min-width: 180px;
 
+
 }
 
-.slide h3 {
+.carouselItem h3 {
   text-align: center;
-  color: #574349;
+  color: #1e1618;
   background: #fff0f0;
   border-radius: 3px;
   margin: 0px;
@@ -478,7 +492,7 @@ margin-left: 75px;
   height: 45px;
 }
 
-.slides {
+.carouselCards {
   overflow-x: scroll;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
@@ -562,21 +576,15 @@ h1 {
   font-size: 13px;
 }
 
-#contact-form > div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
 
 input[type="text"],
 input[type="email"],
 textarea {
   padding: 10px 50px;
-  border: none;
   border-radius: 2px;
   font-size: 16px;
   margin: 5px;
+
 }
 
 button[type="submit"] {
@@ -591,7 +599,7 @@ button[type="submit"] {
 }
 
 button:hover {
-  color: #76d6a6;
+  color: #e0a3b2;
 }
 
 
@@ -603,6 +611,7 @@ button:hover {
 align-items: center;
 background-color: #F3DFE6;
 margin: auto; 
+border-bottom: solid #e6d1d8 2px;
 }
 
 .contactText p, h2 {
@@ -700,6 +709,7 @@ color: rgb(82, 57, 65);
     padding: 5px;
     background-color: #fff9f9;
     border-radius: 3px;
+    border:#704e5a solid;
 
 }
 .ButtonBackground {
@@ -708,7 +718,7 @@ color: rgb(82, 57, 65);
     padding-bottom: 70px;
 }
 
-  #loadMoreBtn {
+  #loadMoreButton {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -722,8 +732,8 @@ color: rgb(82, 57, 65);
     font-size: 15px;
   }
 
-  #loadMoreBtn:hover {
-    background-color:#f1e3e8;
+  #loadMoreButton:hover {
+    background-color:#faf0f4;
     color: #654C54;
   }
 

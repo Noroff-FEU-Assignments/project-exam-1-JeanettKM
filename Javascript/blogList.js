@@ -1,5 +1,5 @@
 const blogContainer = document.getElementById('blogContainer');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
+const loadMoreButton = document.getElementById('loadMoreButton');
 let page = 1;
 const perPage = 9;
 
@@ -56,13 +56,13 @@ async function loadMorePosts() {
     const posts = await fetchBlogPosts();
     renderBlogPosts(posts);
     if (posts.length < perPage) {
-      loadMoreBtn.style.display = 'none';
+      loadMoreButton.style.display = 'none';
     }
   } catch (error) {
     console.error('Error loading more posts:', error);
   }
 }
 
-loadMoreBtn.addEventListener('click', loadMorePosts);
+loadMoreButton.addEventListener('click', loadMorePosts);
 
 fetchBlogPosts().then(renderBlogPosts);
