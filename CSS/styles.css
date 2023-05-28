@@ -162,7 +162,7 @@ h3 {
 
 .footerbloglist {
   text-align: center;
-  background-color: #5c444c;
+  background-color: #574349;
   color: #f3dfe6;
   width: 100%;
   font-size: 15px;
@@ -216,7 +216,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #654C54;
+  background: #4d3a40;
   padding-top: 15px;
   padding-bottom: 450px;
 }
@@ -267,7 +267,7 @@ h3 {
 /*About page*/
 
 .AboutMeStyling {
-  background: #654C54;
+  background: #574349;
   color: white;
   font-weight: 100;
   padding-top: 100px;
@@ -300,7 +300,7 @@ h3 {
 }
 
 .socialBtn1{
-  color: #654C54;
+  color: #574349;
   margin-left: 60px;
   margin-top: 50px;
   margin-bottom: 25px;
@@ -309,7 +309,7 @@ h3 {
 
 }
 .socialBtn2{
-  color: #654C54;
+  color: #574349;
   margin-left: 35px;
   margin-top: 50px;
   margin-bottom: 25px;
@@ -343,21 +343,17 @@ h3 {
 
 /* Form */
 
-.formtextbox {
-  padding: 8px;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
 
 .form-error {
   display: none;
-  color: rgb(175, 9, 9);
+  color: rgb(255, 255, 255);
   font-size: 12px;
-  margin-top: 2px;
-  padding: 5px 0px 25px 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
-.flexconteiner2 {
+.flexconteiner2 {rm
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -378,7 +374,7 @@ h3 {
 #contactForm {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #contactForm > div {
@@ -391,22 +387,21 @@ h3 {
   margin-bottom: 10px;
   margin-top: 10px;
   text-align: center;
-  color: rgb(82, 57, 65);
+  color: white;
   font-size: 15px;
 }
 
 #contactForm button {
   padding: 12px 65px;
-  background-color:#654C54;
-  color: #f1e3e8;
-  border: none;
+  background-color:#f1e3e8;
+  color: #574349;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #contactForm button:hover {
-  background-color:#f1e3e8;
-  color: #654C54;
+  background-color:#654C54;
+  color: #f1e3e8;
   border: solid #654C54 0.1px;
 }
 
@@ -417,7 +412,7 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: #654C54;
+  background: #392C30;
   padding-bottom: 50px;
   max-height: 430px;
   height: 430px;
@@ -454,8 +449,8 @@ margin-left: 75px;
 
 .slide h3 {
   text-align: center;
-  background-color:#2b1f23;
-  color: #F3DFE6;
+  color: #574349;
+  background: #fff0f0;
   border-radius: 3px;
   margin: 0px;
   padding: 7px;
@@ -463,6 +458,24 @@ margin-left: 75px;
 
 .leftButton,
 .rightButton {
+  background-color: transparent;
+  color: #F3DFE6;
+}
+
+.rightButton svg {
+  margin-left: 60px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 45px;
+  height: 45px;
+}
+
+.leftButton svg {
+  margin-left: 60px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 45px;
+  height: 45px;
 }
 
 .slides {
@@ -501,13 +514,20 @@ background-color:#2b1f23;
 color: #F3DFE6;
 }
 
-button:hover {
-background-color: #F3DFE6;
-color: #41242d;
-}
-
 
 /* Contact Form */
+
+.respond  {
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  font-weight: 100;
+  background-color: #80666f;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+}
 
 
 h1 {
@@ -524,7 +544,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 75vh;
-  background-color: #e9ced7;
+  background-color: #80666f;
   max-width: 600px;
   margin: auto;
 }
@@ -552,7 +572,7 @@ h1 {
 input[type="text"],
 input[type="email"],
 textarea {
-  padding: 10px;
+  padding: 10px 50px;
   border: none;
   border-radius: 2px;
   font-size: 16px;
@@ -571,19 +591,17 @@ button[type="submit"] {
 }
 
 button:hover {
-  background-color: #fceff3;
-  color: #654C54;
+  color: #76d6a6;
 }
 
 
 .formBackground {
-  background-color: #957b83;
+  background-color: #574349;
 }
 
 .contactText {
 align-items: center;
-background-color: #e9ced7;
-max-width: 600px;
+background-color: #F3DFE6;
 margin: auto; 
 }
 
@@ -597,7 +615,7 @@ color: rgb(82, 57, 65);
 }
 
 .contactText h2 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 100;
 }
 
@@ -660,8 +678,8 @@ color: rgb(82, 57, 65);
     font-weight:300;
     margin-bottom: 30px;
     margin-top: 0px;
-    color: #654C54;
-    background: #f8eef1;
+    color: #574349;
+    background: #fff9f9;
     padding: 20px;
     min-width: 210px;
     border-radius: 3px;
@@ -680,7 +698,7 @@ color: rgb(82, 57, 65);
 
 .blogLink:hover {
     padding: 5px;
-    background-color: #f8eef1;
+    background-color: #fff9f9;
     border-radius: 3px;
 
 }
@@ -699,7 +717,7 @@ color: rgb(82, 57, 65);
     border: none;
     border-radius: 3px;
     font-size: 14px;
-    background-color: #654C54;
+    background-color: #4d3a40;
     color: #F3DFE6;
     font-size: 15px;
   }
