@@ -49,8 +49,6 @@ async function renderCarousel() {
 }
 
 
-  
-  // Handle navigation
   function handleNavigation(direction) {
     const slidesContainer = document.querySelector('.slides');
     const slideWidth = slidesContainer.querySelector('.slide').offsetWidth;
@@ -76,13 +74,12 @@ async function renderCarousel() {
     });
   }
   
-  // Event listeners for navigation buttons
+  
   const leftButton = document.querySelector('.leftButton');
   const rightButton = document.querySelector('.rightButton');
   
   leftButton.addEventListener('click', () => handleNavigation('prev'));
   rightButton.addEventListener('click', () => handleNavigation('next'));
-  
-  // Initial rendering of the carousel
+
   renderCarousel();
   

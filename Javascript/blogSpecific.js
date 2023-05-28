@@ -1,4 +1,3 @@
-// Get the 'id' parameter from the URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const postId = urlParams.get('id');
@@ -24,17 +23,16 @@ async function renderBlogPost() {
 
   try {
     const post = await fetchBlogPost();
-    document.title = `Jeanett's 5 minute break | ${post.title.rendered}`; // Update the page title
+    document.title = `Jeanett's 5 minute break | ${post.title.rendered}`;
     blogTitle.textContent = post.title.rendered;
     blogContent.innerHTML = post.content.rendered;
 
-    // Remove existing images from the blogContent container
+
     const imagesInContent = blogContent.getElementsByTagName('img');
     while (imagesInContent.length > 0) {
       imagesInContent[0].remove();
     }
 
-    // Get the first image from the post content
     const images = post.content.rendered.match(/<img[^>]+>/);
     if (images) {
       const imageElement = document.createElement('div');
@@ -53,5 +51,4 @@ async function renderBlogPost() {
   }
 }
 
-// Call the renderBlogPost function to display the blog post
 renderBlogPost();

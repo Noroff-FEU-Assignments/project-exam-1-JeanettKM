@@ -3,9 +3,9 @@
 <head>
   <meta name="description" content="Contact me at 5 minutes blog">
   <title>5 minutes | Contact me</title>
-  <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+  <link rel="stylesheet" href="testform.css">
+  <link rel="stylesheet" href="/CSS/styles.css">
   <link rel="stylesheet" href="/CSS/contact.css">
-  <link rel="stylesheet" href="form.css">
   <link rel="icon" href="data:," rel="Stopping GET favicon error" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,38 +47,43 @@
         <br>
         <p>I will respond as soon as possible</p>
       </div>
-      <section id="contact">
-        <form id="contactForm" class="boxmodel1 centeralign formbackgroundcolorcontact conactflexitem two">
-          <div>
-            <label for="userName">Name:</label>
-            <input type="text" name="userName" id="userName" />
-            <div class="form-error" id="userNameError">Please enter your name, it must have a minimum of 5 characters</div>
-          </div>
-          <div>
-            <label for="subject">Subject:</label>
-            <input type="text" name="subject" id="subject" />
-            <div class="form-error" id="subjectError">Please enter a subject, it must have a minimum of 15 characters</div>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" />
-            <div class="form-error" id="emailError">Please enter a valid email</div>
-          </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea class="formtextbox" id="message" name="message"></textarea>
-            <div class="form-error" id="messageError">Please enter a message, it must have a minimum of 25 characters</div>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-      
+            <section class="contactFormContainer">
+              <form id="contactForm" class="boxmodel1 centeralign formbackgroundcolorcontact conactflexitem two">
+                <div>
+                  <label>Name:
+                    <input name="userName" id="userName" /> 
+                  </label>
+                  <div class="form-error" id="userNameError">Please enter your name, it must have a minimum of 5 characters</div>
+                </div>
+                <div>
+                  <label>Email:
+                    <input name="email" id="email" />
+                  </label>
+                  <div class="form-error" id="emailError">Please enter a valid email</div>
+                </div>
+                <div>
+                  <label>Subject:
+                    <input name="subject" id="subject" />
+                  </label>
+                  <div class="form-error" id="subjectError">Please enter a subject, it must have a minimum of 15 characters</div>
+                </div>
+                <div>
+                  <label for="message">Message:
+                    <textarea class="formtextbox" id="message" name="message"></textarea>
+                  </label>
+                    <div class="form-error" id="messageError">Please enter a message, it must have a minimum of 25 characters</div>
+                </div>
+
+
+                <button>Submit</button>
+              </form>
+            </section>
   </main>
-  <footer class="footer">
+  <footer>
     <p>&copy; 2023</p>
   </footer>
   
   <script src="/Javascript/navbar.js"></script>
-  <script src="/Javascript/contact.js"></script>
+  <script src="testform.js"></script>
 </body>
 </html>
