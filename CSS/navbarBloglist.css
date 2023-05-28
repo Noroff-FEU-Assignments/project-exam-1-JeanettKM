@@ -17,7 +17,7 @@
     align-items: center;
     gap: 80px;
     color: #eed9df;
-    flex-grow: 1; /* Allow the menu to grow and occupy the remaining space */
+    flex-grow: 1; 
   }
   
   .nav-logo {
@@ -30,7 +30,7 @@
   
   @media (max-width: 770px) {
     .nav-menu {
-      justify-content: center; /* Center the menu on mobile */
+      justify-content: center;
     }
   }
   
