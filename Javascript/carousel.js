@@ -8,9 +8,10 @@ async function fetchBlogPosts() {
         const mediaResponse = await fetch(`https://www.melsom-development.no/wp-json/wp/v2/media/${post.featured_media}`);
         const media = await mediaResponse.json();
         const imageUrl = media.source_url;
-        return { id: post.id, title: post.title.rendered, image: imageUrl };
+        const altText = media.alt_text;
+        return { id: post.id, title: post.title.rendered, image: imageUrl, alt: altText };
       } else {
-        return { id: post.id, title: post.title.rendered, image: '' };
+        return { id: post.id, title: post.title.rendered, image: '', alt: 'Post Image' };
       }
     });
 
@@ -36,7 +37,7 @@ async function renderCarousel() {
       const post = posts[i];
       slide.innerHTML = `
         <a href="/html/blogspecific.html?id=${post.id}">
-          <img src="${post.image}" alt="Post Image">
+          <img src="${post.image}" alt="${post.alt}">
           <h3>${post.title}</h3>
         </a>`;
 

@@ -40,7 +40,7 @@ a {
   text-decoration: none;
 }
 
-h3 {
+h2 {
   font-size: 14px;
   font-weight: 200;
   text-align: justify;
@@ -278,13 +278,14 @@ h3 {
   font-weight: 100;
   padding-top: 100px;
   padding-bottom:100px;
-  height: 200px;
 }
 
-.AboutMeStyling p {
+.AboutMeStyling div {
   margin-left: 60px;
   max-width: 45%;
+  min-width: 180px;
 }
+
 
 .AboutMeHeader {
   color: #654C54;
@@ -428,6 +429,14 @@ h3 {
   height: 430px;
 }
 
+@media (max-width: 770px) {
+  .carouselContainer {
+    min-width: 400px;
+    flex-direction: column;
+    min-height: 430px;
+  }
+}
+
 .carouselCards {
   display: flex;
   overflow-x: scroll;
@@ -435,6 +444,13 @@ h3 {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 55%;
+}
+
+
+@media (max-width: 770px) {
+  .carouselCards {
+    min-width: 300px;
+  }
 }
 
 .carouselItem:hover {
@@ -448,6 +464,14 @@ padding: 5px;
 background-color: #fff0f0;
 border-radius: 3px;
 
+}
+
+@media (max-width: 770px) {
+  .carouselItem {
+    min-width: 400px;
+    flex-direction: column;
+    min-height: 430px;
+  }
 }
 
 .carouselItem a {
@@ -468,6 +492,7 @@ border-radius: 3px;
   border-radius: 3px;
   margin: 0px;
   padding: 7px;
+  font-weight: 100;
 }
 
 .leftButton,
@@ -527,6 +552,46 @@ button {
 background-color:#2b1f23;
 color: #F3DFE6;
 }
+
+@media (max-width: 770px) {
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .carouselCards {
+    display: none;
+  }
+
+  .carouselItem {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff0f0;
+    border-radius: 3px;
+  }
+
+  .carouselList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .carouselList a {
+    text-decoration: none;
+    color: #1e1618;
+    margin: 10px 0;
+  }
+
+  .carouselList img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 3px;
+  }
+}
+
 
 
 /* Contact Form */
@@ -621,6 +686,7 @@ padding-top: 20px;
 font-size: 15px;
 text-align: center;
 color: rgb(82, 57, 65);
+margin: auto;
 }
 
 .contactText h2 {
@@ -679,9 +745,12 @@ color: rgb(82, 57, 65);
     min-height: 300px;
  }
 
+ .mobileview {
+  display: none;
+}
   
   
-  #blogContainer h3 {
+  #blogContainer h2 {
     text-transform: uppercase;
     font-size: 15px;
     font-weight:300;
@@ -742,4 +811,47 @@ color: rgb(82, 57, 65);
     margin-bottom: 0px;
   }
   
+
+
+  @media (max-width: 770px) {
+    .carouselContainer {
+      display: none;
+    }
+  
+    .mobileview {
+      display: block;
+    }
+  }
+
+  
+  @media (max-width: 770px) {
+    .headercontainer {
+      display: none;
+    }
+  
+    .mobileview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #302428;
+    }
+  
+    .postCard {
+      text-align: center;
+      color: #1e1618;
+      background: #fff0f0;
+      border-radius: 3px;
+      margin: 0px;
+      padding: 7px;
+      font-weight: 100;
+    }
+    .postCard h2 {
+      margin-bottom: 20px;
+    }
+
+    .mobileview a {
+      margin: 20px;
+
+    }
+  }
   
