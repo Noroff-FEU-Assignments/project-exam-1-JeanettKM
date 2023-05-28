@@ -33,7 +33,7 @@ function renderBlogPosts(posts) {
           blogImage.classList.add('blogImage');
           blogImage.style.backgroundImage = `url(${imageUrl})`;
   
-          const blogTitle = document.createElement('h3');
+          const blogTitle = document.createElement('h2');
           blogTitle.classList.add('blogTitle');
           blogTitle.textContent = post.title.rendered;
   
